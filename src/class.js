@@ -1,0 +1,2 @@
+import STopbarShowHideOnScrollComponent from './js/STopbarShowHideOnScrollComponent'
+export default STopbarShowHideOnScrollComponent
