@@ -4,6 +4,15 @@ import __scrollTop from 'coffeekraken-sugar/js/dom/scrollTop'
 import __insertAfter from 'coffeekraken-sugar/js/dom/insertAfter'
 import __getStyleProperty from 'coffeekraken-sugar/js/dom/getStyleProperty'
 
+/**
+ * Provide a simple way to create a topbar that display/hide itself on scroll up/down.
+ * @example    html
+ * <s-topbar-show-hide-on-scroll>
+ *   <!-- my cool topbar here... -->
+ * </s-topbar-show-hide-on-scroll>
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+ */
 export default class STopbarShowHideOnScrollComponent extends SWebComponent {
   /**
    * Default props
@@ -76,6 +85,7 @@ export default class STopbarShowHideOnScrollComponent extends SWebComponent {
   /**
    * Component unmount
    * @definition    SWebComponent.componentUnmount
+   * @protected
    */
   componentUnmount () {
     super.componentUnmount()

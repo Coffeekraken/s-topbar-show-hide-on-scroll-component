@@ -1,19 +1,28 @@
-# Attributes
+# STopbarShowHideOnScrollComponent
 
-Here's the list of available attribute to set on the element.
+Provide a simple way to create a topbar that display/hide itself on scroll up/down.
 
-## scrollUp:
+### Example
+```html
+	<s-topbar-show-hide-on-scroll>
+  <!-- my cool topbar here... -->
+</s-topbar-show-hide-on-scroll>
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
+Extends **SWebComponent**
+
+
+
+
+## Attributes
+
+Here's the list of available attribute(s).
+
+### scrollUp
 
 Specify the scroll up value needed to display the topbar
 
 Type : **{ Integer }**
 
-
-
-
-# Methods
-
-
-## componentUnmount
-
-Component unmount
+Default : **10**

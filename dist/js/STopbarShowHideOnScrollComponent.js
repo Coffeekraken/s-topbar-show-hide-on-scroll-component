@@ -36,6 +36,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/**
+ * Provide a simple way to create a topbar that display/hide itself on scroll up/down.
+ * @example    html
+ * <s-topbar-show-hide-on-scroll>
+ *   <!-- my cool topbar here... -->
+ * </s-topbar-show-hide-on-scroll>
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+ */
 var STopbarShowHideOnScrollComponent = function (_SWebComponent) {
   _inherits(STopbarShowHideOnScrollComponent, _SWebComponent);
 
@@ -86,6 +95,7 @@ var STopbarShowHideOnScrollComponent = function (_SWebComponent) {
     /**
      * Component unmount
      * @definition    SWebComponent.componentUnmount
+     * @protected
      */
 
   }, {
