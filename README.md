@@ -29,6 +29,8 @@
 
 Provide a simple way to create a topbar that display/hide itself on scroll up/down.
 
+[![View demo](http://components.coffeekraken.io/assets/img/view-demo.png)](http://components.coffeekraken.io/app/s-topbar-show-hide-on-scroll-component)
+
 ## Table of content
 
 1. **[Demo](http://components.coffeekraken.io/app/s-topbar-show-hide-on-scroll-component)**
