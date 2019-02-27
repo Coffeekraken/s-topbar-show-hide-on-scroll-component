@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-s-topbar-show-hide-on-scroll-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provide a simple way to create a topbar that display/hide itself on scroll up/down",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
@@ -41,8 +41,7 @@
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "pre-commit": [
-    "test",
-    "lint"
+    "test"
   ],
   "keywords": [
     "webcomponent",
