@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-s-topbar-show-hide-on-scroll-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provide a simple way to create a topbar that display/hide itself on scroll up/down",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
@@ -16,7 +16,10 @@
       "paths": "src/**/*.scss"
     },
     "demo:js": {
-      "paths": "demo/src/**/*.js"
+      "paths": [
+        "demo/src/**/*.js",
+        "src/**/*.js"
+      ]
     },
     "demo:css": {
       "paths": "demo/src/**/*.scss"

@@ -33,7 +33,21 @@ export default class STopbarShowHideOnScrollComponent extends SWebComponent {
        * @prop
        * @type    {Boolean}
        */
-      placeholder: true
+      placeholder: true,
+
+      /**
+       * Specify if want to keep the topbar shown or not
+       * @prop
+       * @type    {Boolean|Function}
+       */
+      keepShown: false,
+
+      /**
+       * Specify if want to keep the topbar hided or not
+       * @prop
+       * @type    {Boolean|Function}
+       */
+      keepHided: false
     };
   }
 
@@ -111,13 +125,64 @@ export default class STopbarShowHideOnScrollComponent extends SWebComponent {
    * @param    {Event}    e    The scroll event
    */
   _onScroll(e) {
+
+    if (this.props.keepShown) {
+      if (typeof this.props.keepShown === 'function') {
+        if (this.props.keepShown(this)) {
+          this.show()
+          return
+        }
+      } else {
+        this.show()
+        return
+      }
+    }
+
+    if (this.props.keepHided) {
+      if (typeof this.props.keepHided === 'function') {
+        if (this.props.keepHided(this)) {
+          this.hide()
+          return
+        }
+      } else {
+        this.hide()
+        return
+      }
+    }
+
     const newTop = __scrollTop();
     if (this._currentTop < newTop && newTop > this.offsetHeight) {
-      this.style.transform = "translateY(-100%)";
+      this.hide()
     } else if (newTop < this._currentTop - this.props.scrollUp) {
-      this.style.transform = "translateY(0)";
+      this.show()
     }
     this._currentTop = newTop;
+  }
+
+  /**
+   * Show the topbar
+   */
+  show() {
+    if (this.isShown()) return
+    this._isShown = true
+    this.style.transform = "translateY(0)";
+  }
+
+  /**
+   * Hide the topbar
+   */
+  hide() {
+    if (!this.isShown()) return
+    this._isShown = false
+    this.style.transform = "translateY(-100%)";
+  }
+
+  /**
+   * Check if the topbar is shown or not
+   * @return    {Boolean}    true if shown, false if not
+   */
+  isShown() {
+    return this._isShown
   }
 
   /**
